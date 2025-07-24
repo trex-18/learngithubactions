@@ -2,8 +2,7 @@ name: Test Actions
 
 on:
   push:
-    branch: 
-      - 'main'
+    branch: [main]
 
 jobs:
   my_hello:
