@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: just say hello
-        run: 
-          echo "Bonjour Tout le monde."
+        run: echo "Bonjour Tout le monde."
 
       
     
