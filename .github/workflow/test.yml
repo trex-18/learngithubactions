@@ -1,0 +1,15 @@
+name: Test Actions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  my_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: just say hello
+        run: echo "Bonjour Tout le monde."
+
+      
+    
