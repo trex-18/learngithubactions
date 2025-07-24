@@ -1,11 +1,25 @@
-#Je fais mon test pour voir 
-name: Test Actions
+
+name: Basic CI Pipeline
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
-  my_hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: just say hello
-        run: echo "Bonjour Tout le monde."
+      - name: Checkout Repository
+        uses: action/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests 
+        run: npm test
